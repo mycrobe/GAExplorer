@@ -3,6 +3,10 @@ The sortable grid is based on code from https://github.com/irusri/correlation-ex
 ("An interactive way to explore 2d arrays")
 
 */
+var d3 = require('d3');
+var $ = require('jquery');
+
+import {ingest} from './oncoprint';
 
 var stringify = function (x) {
   if (typeof(x) === 'number' || x === undefined) {
@@ -21,7 +25,7 @@ function outputUpdate(zoomvalue) {
 
 var nugenes = false;
 
-window.onload=function(){
+window.onload = function(){
 
   ingest();
 

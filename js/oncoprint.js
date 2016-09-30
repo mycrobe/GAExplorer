@@ -1,3 +1,6 @@
+var d3 = require('d3');
+var $ = require('jquery');
+
 var displayGenes = {},
     allData = {},
     data = [],
@@ -72,7 +75,7 @@ var geneList = [
 ];
 var impact_mod, impact_hi, sv, cnv, rna; // variables for weighting values
 
-function ingest() {
+export function ingest() {
     var samp = 0; // variable for keeping track of samples; it's incremented after data is loaded
 
     for (var j = 0; j < sampleList.length; j++) {
